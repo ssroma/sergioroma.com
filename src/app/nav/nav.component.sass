@@ -1,0 +1,169 @@
+@import '../sass/variables'
+@import '../sass/mixins'
+
+nav 
+    width: 100%
+    height: 15vh
+    display: flex
+    justify-content: space-around
+    align-items: center
+    position: relative
+    padding: 2.5rem .5rem 1rem .5rem
+    background-color: transparent
+
+    @include media(tablet)
+        height: 20vh
+        justify-content: space-between
+        padding: 0 1.5rem 0 1.5rem
+
+    @include media(computer)
+        height: 30vh
+        padding: 0 2rem 0 2.5rem
+    .logo
+        width: 60%
+        height: 4rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        @include media(tablet)
+            width: 36%
+
+    p 
+        width: 74%
+        margin: .1rem 0 0 0
+        font-size: .5rem
+        letter-spacing: .3rem
+        color: $green
+        font-weight: 200
+        transform: scaleY(1.4)
+        background-color: transparent
+
+    .menu
+        display: block
+        margin: 0 1.5rem
+        width: 3.5rem
+        height: 3.5rem
+        cursor: pointer
+
+        @include media(tablet)
+            display: none
+        
+
+        &:hover > .menu_bar
+            background-color: $green
+
+        .menu_bar
+            width: 100%
+            height: 8px
+            margin: .5rem 0
+            border-radius: .5rem
+            background-color: $lighter
+            @include trans(all, .3s, ease-in)
+
+    .links
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100vh
+        background-color: $dark_blue
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        padding: 3rem 1rem 2rem 1rem
+        //display: none
+
+        @include media(tablet)
+            left: 0 !important
+            position: relative
+            display: flex
+            background-color: transparent
+            flex-direction: row
+            justify-content: space-around
+            width: 55%
+            height: auto
+            padding: 0
+
+        @include media(computer)
+            left: 0 !important
+            position: relative
+            display: flex
+
+
+
+
+        .menu_image
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 80%
+
+            @include media(tablet)
+                display: none
+
+            p 
+                width: 53% !important
+        
+        .ul_links
+            list-style: none
+            width: 100%
+            height: 43%
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+
+            @include media(tablet)
+                flex-direction: row
+                width: 85%
+                
+
+
+            .li_links
+                
+                
+                a 
+                    text-decoration: none
+                    display: block
+                    padding: 1rem .5rem 
+                    font-family: $meri
+                    font-size: 1.6rem
+                    font-weight: 700
+                    color: $lighter
+                    @include trans(all, .3s, ease-in)
+
+                    @include media(tablet)
+                        font-size: 1.3rem
+                    @include media(computer)
+                        font-size: 1.6rem
+
+                    &:hover
+                        color: $green
+
+
+        .btnClose
+            width: 4rem
+            height: 4rem
+            border-radius: 50% 
+            color: $dark_blue
+            background-color: $lighter
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 2rem 
+            font-weight: bold
+            @include trans(all, .3s, ease-in)
+
+            @include media(tablet)
+                display: none
+
+            &:hover
+                color: $green
+                border: 1px solid $green
+                background-color: $dark_blue
+
+        
+        

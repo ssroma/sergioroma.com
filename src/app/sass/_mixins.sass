@@ -1,0 +1,28 @@
+
+
+//transition
+
+@mixin trans($type, $temp, $func )
+    transition: $type $temp $func
+
+
+
+@mixin media($devise)
+    @if $devise == phone
+        @media ( min-width: 480px )
+            @content
+    @if $devise == tablet
+        @media ( min-width: 650px )
+            @content
+    @if $devise == computer
+        @media ( min-width: 980px )
+            @content
+    @if $devise == largeScreen
+        @media ( min-width: 1024px )
+            @content
+
+@mixin flex()
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center

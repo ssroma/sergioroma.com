@@ -1,0 +1,98 @@
+@import '../sass/variables'
+@import '../sass/mixins'
+
+.aboutMe_content
+    z-index: 2
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @include media(computer)
+        margin-bottom: 2rem
+
+    .meImg
+        width: 10rem
+        height: 10rem
+        border-radius: 50%
+        margin: 2rem 0 .8rem 0 
+
+        @include media(tablet)
+            width: 11rem
+            height: 11rem
+
+        @include media(computer)
+            width: 13rem
+            height: 13rem
+
+    .me_skills
+        width: 100%
+        
+        @include media(tablet)
+            display: flex
+            justify-content: space-around
+            
+
+    
+        .me, .skills
+            width: 100%
+            padding: .2rem .7rem
+            font-family: $meri
+            color: $lighter
+
+            @include media(tablet)
+                padding: .2rem 1.7rem
+
+            h3 
+                font-family: $mont
+                font-size: 1.8rem
+                font-style: italic
+                font-weight: 500
+                text-align: center
+                margin-bottom: .6rem
+            p 
+                font-size: .8rem
+                font-weight: 200
+                line-height: 1.3rem
+
+
+                &::first-letter
+                    font-size: 1.6rem
+                    color: $green
+
+                span
+                    text-transform: uppercase   
+            
+            .ul_skills
+                width: 80%
+                list-style: none
+                height: 11rem
+                display: flex
+                flex-flow: row wrap
+                flex-direction: column
+                align-items: center
+                font-size: .8rem
+                line-height: 1.4rem
+
+                li_skills
+                    width: 50%
+        .me 
+            p 
+                @include media(tablet)
+                    font-size: 1.2rem
+                    line-height: 1.8rem
+                    margin-bottom: .5rem               
+
+        .skills
+            padding-top: .7rem
+            .ul_skills
+                @include media(tablet)
+                    width: 100%
+                    font-size: 1.2rem
+                    flex-flow: column
+                    line-height: 1.6rem
+
+            .li_skills
+                @include media(tablet)
+                    width: 40%
+                    align-self: center

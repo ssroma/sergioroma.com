@@ -1,0 +1,23 @@
+<nav>
+  <div class="logo">
+    <a href="#"><img src="../../assets/images/meu-site-logo.png" alt="www.sergioroma.com"></a>
+    <p>Front-end Dev</p>
+  </div>
+  <div class="menu" (click)="onOpen(link)">
+    <div class="menu_bar"></div>
+    <div class="menu_bar"></div>
+    <div class="menu_bar"></div>
+  </div>
+  <div class="links" #link [@links]="showHideNav">
+    <div class="menu_image">
+      <img src="../../assets/images/meu-site-logo.png" alt="Sergio Roma">
+      <p>Front-end Dev</p>
+    </div>
+    <ul class="ul_links">
+      <li class="li_links"><a (click)="closeNav()" routerLink="." fragment="about" >About</a></li>
+      <li class="li_links"><a (click)="closeNav()" routerLink="." fragment="project" >Project</a></li>
+      <li class="li_links"><a (click)="closeNav()" routerLink="." fragment="contact" >Contact</a></li>
+    </ul>
+    <button (click)="onClose(link)" class="btnClose">X</button>
+  </div>
+</nav>

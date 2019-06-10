@@ -1,0 +1,193 @@
+@import '../sass/variables'
+@import '../sass/mixins'
+    
+.contact_content
+    width: 100%
+    height: 100vh
+    padding: .7rem .5rem 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    @include media(computer)
+       flex-direction: row 
+       align-items: normal
+
+    &::after
+        z-index: -1
+        content: ''
+        width: 180%
+        height: 15rem
+        position: absolute
+        top: auto
+        left: -10%
+        bottom: -45px
+        background-color: $light_blue
+        transform: rotate(-35deg)
+
+        @include media(computer)
+            display: none 
+
+
+    h3
+        font-family: $meri
+        font-size: 1.4rem
+        color: $lighter
+
+    .cv_copy
+
+        @include media(computer)
+            width: 60%
+            display: flex
+            align-items: center
+            height: 24rem
+            margin: 2rem
+        
+        .cv_image
+            position: relative
+            width: 100%
+            @include flex()
+
+            h3 
+                margin-bottom: .9rem
+
+                @include media(computer)
+                    display: none
+
+            img
+                width: 50%
+                border-radius: .5rem
+
+                @include media(computer)
+                    width: 100%
+
+            .tick_cv
+                position: absolute
+                top: 16%
+                right: 19%
+                width: 3rem
+                height: 3rem
+                border-radius: 50%
+                background-color: $dark_blue
+                @include flex()
+                color: $green
+                font-size: 1.6rem
+
+                @include media(computer)
+                    width: 4rem 
+                    height: 4rem 
+                    top: -5%
+                    right: -12%
+
+        .download
+            width: 100%
+            @include flex()
+            margin: 1rem 0 1rem 0
+
+            @include media(computer)
+                height: 7rem
+
+            h3 
+                display: none
+
+                @include media(computer)
+                    display: block
+
+            .btn_download
+                width: 75%
+                padding: .5rem 0
+                text-decoration: none
+                border-radius: .9rem
+                border: 1px solid $green
+                background-color: $green
+                color: $dark_blue
+                font-size: 1.3rem 
+                font-weight: 500
+                cursor: pointer
+                @include trans(all, .3s, ease-in)
+
+                @include media(computer)
+                    width: 95%
+
+                &:hover
+                    color: $lighter
+                    background-color: $lighter_blue
+                    border: 1px solid $lighter_blue
+
+                    @include media(computer)
+                        color: $green
+                        background-color: $dark_blue
+                        border: 1px solid $dark_blue
+
+    .contact_form
+        margin: 1rem 0 0 0
+        width: 80%
+        @include flex()
+
+        @include media(computer)
+            justify-content: flex-end
+            margin: 0 1rem 3rem 0
+        
+        form
+            width: 100%
+            @include flex()
+            padding: .5rem .8rem
+
+            .form-group
+                width: 100%
+                display: flex
+                flex-direction: column
+
+                label
+                    font-size: .8rem
+                    color: $lighter
+                    padding: .3rem 0 .1rem 0
+
+                input
+                    background-color: $lighter
+                    border: 0px solid transparent
+                    border-radius: .5rem
+                    height: 1.9rem
+                    padding: .5rem
+                    font-size: .9rem
+                    color: $dark_blue
+
+                textarea
+                    @extend input
+                    height: 4.5rem
+                
+                .btn_submit
+                    width: 75%
+                    padding: .5rem 0
+                    text-decoration: none
+                    border-radius: .9rem
+                    border: 1px solid $green
+                    background-color: $green
+                    color: $dark_blue
+                    font-size: 1.3rem 
+                    font-weight: 500
+                    cursor: pointer
+                    align-self: center
+                    margin-top: .7rem
+                    @include trans(all, .3s, ease-in)
+
+                    &:hover
+                        color: $lighter
+                        background-color: $lighter_blue
+                        border: 1px solid $lighter_blue
+
+                        
+
+
+
+
+
+
+
+
+
+             
+
+
+

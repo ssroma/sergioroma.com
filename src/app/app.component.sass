@@ -1,0 +1,93 @@
+@import './sass/variables'
+@import './sass/mixins'
+
+#wrapper
+    z-index: 1
+    width: 100%
+    overflow: hidden
+    position: relative
+    background-color: $dark_blue
+    
+    .bgImage
+        z-index: -1
+        position: absolute
+        top: 55vh
+        left: -60%
+        width: 250%
+        height: 65vh
+        background-image: url('../assets/images/bgImage.jpg')
+        background-position: center
+        background-size: cover
+        transform: rotate(-35deg)
+        opacity: .6
+
+        @include media(tablet)
+            top: 60vh
+            height: 90vh
+            transform: rotate(-30deg)
+
+        @include media(computer)
+            height: 100vh
+            transform: rotate(-30deg)
+
+        @include media(largeScreen)
+            top: 45vh
+            height: 100vh
+            transform: rotate(-25deg)
+
+    .bgLighterblue
+        z-index: -1
+        position: absolute
+        top: 120vh
+        left: -60%
+        width: 250%
+        height: 65vh
+        background-color: $lighter_blue
+        transform: rotate(-35deg)
+
+        @include media(tablet)
+            height: 85vh
+            top: 160vh
+            transform: rotate(-30deg)
+
+        @include media(computer)
+            top: 160vh
+            height: 150vh
+            transform: rotate(-30deg)
+
+        @include media(largeScreen)
+            top: 155vh
+            height: 160vh
+            transform: rotate(-25deg)
+
+    .bgLightblue
+        z-index: -1
+        position: absolute
+        top: 390vh
+        left: -60%
+        width: 250%
+        height: 65vh
+        background-color: $light_blue
+        transform: rotate(-35deg)
+
+        @include media(tablet)
+            height: 100vh
+            transform: rotate(-30deg)
+
+        @include media(computer)
+            display: none
+            height: 100vh
+            transform: rotate(-30deg)
+
+        @include media(largeScreen)
+            height: 150vh
+            transform: rotate(-25deg)
+
+    .innerWrapper
+        z-index: 1
+        width: 100%
+        position: relative
+
+        @include media(largeScreen) 
+            width: 80%
+            margin: 0 auto

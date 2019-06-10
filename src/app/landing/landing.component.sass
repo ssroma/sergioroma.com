@@ -1,0 +1,94 @@
+@import '../sass/variables'
+@import '../sass/mixins'
+
+.landing
+    z-index: 2
+    height: 85vh
+    display: flex
+    justify-content: space-around
+
+    @include media(tablet)
+        height: 80vh
+    @include media(computer)
+        height: 70vh
+
+
+    .landing_content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        
+
+        h1 
+            color: $lighter
+            font-family: $meri
+            font-weight: 700
+            letter-spacing: .3rem
+            font-size: 3rem
+            margin-bottom: 1.8rem
+
+            @include media(tablet)
+                margin-top: -2rem
+                font-size: 4rem
+                margin-bottom: .8rem
+            @include media(computer)
+                font-size: 5rem
+
+        .code_text
+            display: flex
+            justify-content: center
+            align-items: baseline
+
+            .brackets
+                font-size: 4rem
+                font-weight: 500
+                color: $green 
+
+                @include media(tablet)
+                    font-size: 5rem
+                @include media(computer)
+                    font-size: 6rem
+
+            h3 
+                font-size: 3rem
+                font-weight: 800
+                color: $green 
+                padding: 0 .8rem
+
+                @include media(tablet)
+                    font-size: 4rem
+                @include media(computer)
+                    font-size: 5rem
+               
+
+            
+
+        .landing_links
+            width: 100%
+            display: flex
+            justify-content: center
+            margin: 7rem 0 0 0
+
+            @include media(tablet)
+                margin: 5rem 0 0 0
+
+            a
+                display: block
+                padding: .5rem
+                width: 28%
+
+                @include media(tablet)
+                    width: 18%
+                @include media(computer)
+                    width: 12%
+
+                img
+                    border-radius: 50%
+                    border: 4px solid transparent
+                    @include trans(all, .3s, ease-in)
+
+                    &:hover 
+                        border-radius: 50%
+                        border: 4px solid $green
+
