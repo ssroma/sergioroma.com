@@ -2,37 +2,56 @@
   <div class="cv_copy">
     <div class="cv_image">
         <h3>Get a Copy!</h3>
-        <div class="tick_cv">v</div>
+        <div class="tick_cv" #toAnime>v</div>
         <img src="../../assets/images/cv.png" alt="Cv get a copy">
     </div>
     <div class="download">
       <h3>Get a Copy!</h3>
-      <button class="btn_download">Roma's Cv</button>
+      <a href="../../assets/images/cv.png" download="cv.png" class="btn_download" (click)="cvDownload(toAnime)" >Roma's Cv</a>
     </div>
   </div>
 
   <div class="contact_form">
     <h3>Get in Touch</h3>
-    <form>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" >
+
       <div class="form-group">
         <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" class="form-control">
+        <input type="text" id="nameInput" formControlName="nameInput" 
+          [ngClass]="{
+            'is-valid' : nameInput.valid,
+            'is-invalid' : nameInput.invalid && nameInput.touched
+          }"
+        >
       </div>
       
       <div class="form-group">
         <label for="emailInput">Email:</label>
-        <input type="email" id="emailInput" class="form-control">
+        <input type="email" id="emailInput" formControlName="emailInput"
+          [ngClass]="{
+            'is-valid' : emailInput.valid,
+            'is-invalid' : emailInput.invalid && emailInput.touched
+          }"
+        >
       </div>
       
       <div class="form-group">
         <label for="textInput">Questions:</label>
-        <textarea id="textInput" cols="20" rows="5"></textarea>
+        <textarea id="textInput" formControlName="textInput" cols="20" rows="5"
+        [ngClass]="{
+          'is-valid' : textInput.valid,
+          'is-invalid' : textInput.invalid && textInput.touched
+        }"
+        ></textarea>
       </div>
 
       <div class="form-group">
-        <button class="btn_submit" type="submit">Get in Touch</button>
+        <button 
+          [disabled]="myForm.invalid" 
+          [ngClass]="{'btn_submit' : true, 'btnDisabled' : myForm.invalid }" 
+          type="submit"
+        >Get in Touch</button>
       </div>
-
 
     </form>
   </div>

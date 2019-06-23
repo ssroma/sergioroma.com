@@ -3,16 +3,24 @@
     
 .contact_content
     width: 100%
-    height: 100vh
+    height: auto
     padding: .7rem .5rem 
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
 
+    @include media(tablet)
+        height: 100vh
+
     @include media(computer)
-       flex-direction: row 
-       align-items: normal
+        flex-direction: row 
+        align-items: normal
+        
+
+    @include media(land)
+        height: auto
+    
 
     &::after
         z-index: -1
@@ -36,6 +44,9 @@
         color: $lighter
 
     .cv_copy
+
+        @include media(tablet)
+            width: 50%
 
         @include media(computer)
             width: 60%
@@ -98,6 +109,7 @@
                 width: 75%
                 padding: .5rem 0
                 text-decoration: none
+                text-align: center
                 border-radius: .9rem
                 border: 1px solid $green
                 background-color: $green
@@ -148,10 +160,26 @@
                     background-color: $lighter
                     border: 0px solid transparent
                     border-radius: .5rem
-                    height: 1.9rem
+                    height: 2.1rem
                     padding: .5rem
                     font-size: .9rem
                     color: $dark_blue
+                    @include media(computer)
+                        height: 2.4rem
+                .is-valid
+                    background-image: url('../../assets/images/is-valid.png') 
+                    border: 2px solid $green
+                    background-repeat: no-repeat
+                    background-size: 1.4rem
+                    background-origin: content-box
+                    background-position: center right
+                .is-invalid
+                    background-image: url('../../assets/images/is-invalid.png') 
+                    border: 2px solid $red
+                    background-repeat: no-repeat
+                    background-size: 1.4rem
+                    background-origin: content-box
+                    background-position: center right
 
                 textarea
                     @extend input
@@ -176,6 +204,14 @@
                         color: $lighter
                         background-color: $lighter_blue
                         border: 1px solid $lighter_blue
+
+                .btnDisabled
+                    opacity: .7
+                    pointer-events: none
+
+
+
+                        
 
                         
 

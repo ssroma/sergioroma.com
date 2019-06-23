@@ -5,8 +5,7 @@ import {
   style,
   animate,
   transition
-} from '@angular/animations'
-
+} from '@angular/animations';
 
 @Component({
   selector: 'app-nav',
@@ -32,7 +31,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     
-  }
+   }
 
   onOpen(links: HTMLElement){
     console.log('From close button.' + links)
@@ -47,7 +46,6 @@ export class NavComponent implements OnInit {
   }
 
   closeNav(){
-    console.log(this.showHideNav)
     if(this.showHideNav == 'openned'){
       this.showHideNav == 'openned' ? this.showHideNav = 'closed' : this.showHideNav = 'openned'
     }
