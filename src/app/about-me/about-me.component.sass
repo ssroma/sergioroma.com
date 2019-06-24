@@ -79,6 +79,7 @@
 
                 li_skills
                     width: 50%
+                
         .me 
             p 
                 @include media(tablet)
@@ -94,6 +95,10 @@
                     font-size: 1.2rem
                     flex-flow: column
                     line-height: 1.6rem
+
+                @include media(computer)
+                    flex-wrap: wrap
+                    height: 20rem
 
             .li_skills
                 @include media(tablet)
